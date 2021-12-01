@@ -40,15 +40,33 @@ class FileUpload extends Controller
             ];
 
             $save = $db->insert($data);
-            print_r('File has successfully uploaded');
         }
+    }
+
+    function upload_ajax() {
+        move_uploaded_file($_FILES['file']['tmp_name'], WRITEPATH.'uploads\\'. $_FILES['file']['name']);
+        $database = \Config\Database::connect();
+        $db = $database->table('smartassos.users');
+
+        $data = [
+             'name' =>  $_FILES['file']['name'],
+             'type'  => $_FILES['file']['type']
+        ];
+
+        $save = $db->insert($data);
+        if($save) {
+            echo json_encode(1);
+        } else {
+            echo json_encode(0);
+        }
+
     }
 
     public function download($fileName = NULL) {
         if ($fileName) {
             return $this
                 ->response
-                ->download(WRITEPATH . 'uploads/' . $fileName, null)
+                ->download(WRITEPATH . 'uploads\\' . $fileName, null)
                 ->setFileName($fileName);
         } else {
             echo 'Ce fichier n\'exite pas';
