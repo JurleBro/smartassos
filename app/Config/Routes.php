@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/mail', 'SendMail::index');
 $routes->get('/file', 'FileUpload::index');
 $routes->add('/file/(:any)', 'FileUpload::download/$1');
+$routes->get('/chat', 'ChatController::index');
 
 
 /*

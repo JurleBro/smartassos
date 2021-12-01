@@ -15,28 +15,10 @@
 
 <body>
   <div class="container mt-5">
-  <div id="uploadFile">
-    <?php if (! empty($files) && is_array($files)): ?>
 
-        <?php foreach ($files as $file): ?>
-
-            <a href="<?php echo base_url('file/'. esc($file['name']));?>" ><?= esc($file['name']) ?></a>
-
-        <?php endforeach; ?>
-
-    <?php else: ?>
-
-        <h3>No files</h3>
-
-        <p>Unable to find any files for you.</p>
-
-    <?php endif ?>
-    </div>
     <form method="post" action="javascript:uploadFile();" enctype="multipart/form-data">
       <div class="form-group">
-        <label>Avatar</label>
         <input id="file" type="file" name="file" class="form-control">
-        <input type="text" id="input_test" name="test" class="form-control">
       </div>
 
       <div class="form-group">
@@ -44,6 +26,23 @@
       </div>
     </form>
 
+      <ul id="uploadFile">
+          <?php if (! empty($files) && is_array($files)): ?>
+
+              <?php foreach ($files as $file): ?>
+
+                  <li><a href="<?php echo base_url('file/'. esc($file['name']));?>" ><?= esc($file['name']) ?></a></li>
+
+              <?php endforeach; ?>
+
+          <?php else: ?>
+
+              <h3>No files</h3>
+
+              <p>Unable to find any files for you.</p>
+
+          <?php endif ?>
+      </ul>
   </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -65,7 +64,7 @@
               processData: false,
             success: function (data) {
                    if(data == 1) {
-                       $("#uploadFile").append('<a href='+url_file+'> '+file[0].name+'</a>');
+                       $("#uploadFile").append('<li><a href='+url_file+'> '+file[0].name+'</a></li>');
                    } else {
                        alert('Error ! File not uploaded');
                    }

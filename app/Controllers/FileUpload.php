@@ -44,7 +44,7 @@ class FileUpload extends Controller
     }
 
     function upload_ajax() {
-        move_uploaded_file($_FILES['file']['tmp_name'], WRITEPATH.'uploads\\'. $_FILES['file']['name']);
+        move_uploaded_file($_FILES['file']['tmp_name'], WRITEPATH.'uploads/'. $_FILES['file']['name']);
         $database = \Config\Database::connect();
         $db = $database->table('smartassos.users');
 
@@ -66,7 +66,7 @@ class FileUpload extends Controller
         if ($fileName) {
             return $this
                 ->response
-                ->download(WRITEPATH . 'uploads\\' . $fileName, null)
+                ->download(WRITEPATH . 'uploads/' . $fileName, null)
                 ->setFileName($fileName);
         } else {
             echo 'Ce fichier n\'exite pas';
