@@ -8,8 +8,8 @@ class ChatModel extends Model
 {
     protected $table = 'chat';
 
-    public function getMessages() {
-        return $this->findAll();
+    public function getMessages($idGrp) {
+        return $this->where('grp', $idGrp)->get()->getResultArray();
     }
 
     public function saveChat($data)

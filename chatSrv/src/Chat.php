@@ -7,14 +7,19 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 class Chat implements MessageComponentInterface {
     protected $clients;
+    protected $clientsGrp;
+    protected $grp;
 
     public function __construct() {
         $this->clients = new \SplObjectStorage;
+        $this->clientsGrp = [];
+        $this->grp = [];
     }
 
     public function onOpen(ConnectionInterface $conn) {
         // Store the new connection to send messages to later
         $this->clients->attach($conn);
+        $this->clientsGrp[$conn->resourceId] = ['connexion' => $conn, 'firstMessage' => false, 'grp' => -1];
 
         echo "New connection! ({$conn->resourceId})\n";
     }
@@ -24,10 +29,20 @@ class Chat implements MessageComponentInterface {
         echo sprintf('Connection %d sending message "%s" to %d other connection%s' . "\n"
             , $from->resourceId, $msg, $numRecv, $numRecv == 1 ? '' : 's');
 
-        foreach ($this->clients as $client) {
-            if ($from !== $client) {
-                // The sender is not the receiver, send to each client connected
-                $client->send($msg);
+        if(!$this->clientsGrp[$from->resourceId]['firstMessage']) {
+            $this->clientsGrp[$from->resourceId]['firstMessage'] = true;
+            $this->clientsGrp[$from->resourceId]['grp'] = $msg;
+            if(empty($this->grp[$msg])) {
+                $this->grp[$msg] = [];
+            }
+            array_push($this->grp[$msg],$from);
+            print_r($msg);
+        } else {
+            foreach ($this->grp[$this->clientsGrp[$from->resourceId]['grp']] as $client) {
+                if ($from !== $client) {
+                    // The sender is not the receiver, send to each client connected
+                    $client->send($msg);
+                }
             }
         }
     }

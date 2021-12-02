@@ -24,7 +24,7 @@ services:
       - APACHE_RUN_GROUP=#${UID}
     restart: unless-stopped
     volumes:
-      - ./src:/var/www/html
+      - ./appSrv:/var/www/html
       - ./apache_log:/var/log/apache2
     ports:
       - 80:80
@@ -39,4 +39,4 @@ services:
       - 8080:8080
 volumes:
   db_data:
-  src:
+  appSrv:

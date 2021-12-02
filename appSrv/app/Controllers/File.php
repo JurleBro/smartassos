@@ -9,7 +9,6 @@ class File extends Controller
     public function index()
     {
         $db = \Config\Database::connect();
-        $db->query('create table if not exists chat ( id bigint unsigned auto_increment, msg varchar(250) null, pseudo varchar(250) null, constraint id unique (id))');
 
         $db->query('create table if not exists file ( id bigint unsigned auto_increment, name varchar(100) not null , type varchar(255) not null, constraint id unique (id))');
 

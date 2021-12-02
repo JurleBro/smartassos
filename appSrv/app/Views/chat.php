@@ -48,7 +48,7 @@
     let submitMsg = () => {
         let msg = $("#msg").val();
         let pseudo = $("#pseudo").val()
-        let url = '<?php echo base_url('ChatController/saveChat');?>'+'/'+pseudo+'/'+msg;
+        let url = '<?php echo base_url('ChatController/saveChat');?>/<?= esc($idGrp) ?>/'+pseudo+'/'+msg;
         $.ajax(url, () => {});
         sendMsg(msg);
         $("#msg").val("");
@@ -57,6 +57,7 @@
     var conn = new WebSocket('ws://localhost:8082');
     conn.onopen = function(e) {
         console.log("Connection established!");
+        conn.send('<?= esc($idGrp) ?>');
     };
 
     conn.onmessage = function(e) {
