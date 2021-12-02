@@ -54,7 +54,7 @@
         $("#msg").val("");
     }
 
-    var conn = new WebSocket('ws://localhost:8081');
+    var conn = new WebSocket('ws://localhost:8082');
     conn.onopen = function(e) {
         console.log("Connection established!");
     };

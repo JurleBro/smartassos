@@ -1,14 +1,13 @@
 <?php
 namespace App\Controllers;
-use App\Models\FormModel;
 use CodeIgniter\Controller;
 
-class SendMail extends Controller
+class Mail extends Controller
 {
 
     public function index()
-	{
-        return view('send_mail');
+    {
+        return view('mail');
     }
 
     function sendMail() {
@@ -19,17 +18,18 @@ class SendMail extends Controller
         $email = \Config\Services::email();
 
         $email->setTo($to);
-        $email->setFrom('smartassoseverest@gmail.com', 'SmartAssos');
+        $email->setFrom('eeverest023@gmail.com', 'SmartAssos');
 
         $email->setSubject($subject);
         $email->setMessage($message);
 
         if ($email->send())
-		{
+        {
             echo 'Email successfully sent';
+            return view('mail');
         }
-		else
-		{
+        else
+        {
             $data = $email->printDebugger(['headers']);
             print_r($data);
         }

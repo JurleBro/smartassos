@@ -1,0 +1,34 @@
+AH00112: Warning: DocumentRoot [/var/www/html/public] does not exist
+[Thu Dec 02 07:59:55.708263 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 07:59:55.709200 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00112: Warning: DocumentRoot [/var/www/html/public] does not exist
+[Thu Dec 02 08:03:38.409987 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 08:03:38.411077 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 08:10:46.207100 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 02 08:21:50.286731 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 08:21:50.288280 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 08:22:07.134808 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 08:22:07.135835 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 08:54:45.765154 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 08:54:45.766444 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 10:46:21.840339 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 02 10:46:33.179693 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 10:46:33.180834 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 13:10:11.755287 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 02 13:19:28.093809 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 13:19:28.095096 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 13:28:16.943996 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 02 13:28:19.717477 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 13:28:19.720033 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 13:41:21.135109 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 02 13:41:23.783180 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 13:41:23.785535 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 13:49:02.030370 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 13:49:02.031887 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 13:49:23.349323 2021] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 02 13:49:39.107389 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 13:49:39.108484 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 13:55:10.010826 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 13:55:10.012508 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Dec 02 15:07:09.861962 2021] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.51 (Debian) PHP/7.4.26 configured -- resuming normal operations
+[Thu Dec 02 15:07:09.865148 2021] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

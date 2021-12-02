@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ChatModel extends Model
 {
-    protected $table = 'smartassos.chat';
+    protected $table = 'chat';
 
     public function getMessages() {
         return $this->findAll();

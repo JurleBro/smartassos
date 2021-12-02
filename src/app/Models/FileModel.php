@@ -1,12 +1,10 @@
 <?php
-
 namespace App\Models;
-
 use CodeIgniter\Model;
 
 class FileModel extends Model
 {
-    protected $table = 'smartassos.users';
+    protected $table = 'file';
 
     public function getFiles()
     {

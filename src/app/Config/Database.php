@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost',
+        'hostname' => 'db',
         'username' => 'root',
-        'password' => 'mysqlmysql',
-        'database' => '',
+        'password' => 'cod31gn1t3',
+        'database' => 'codeigniter_db',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -58,12 +58,12 @@ class Database extends Config
      */
     public $tests = [
         'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => 'root',
-        'database' => 'smartassos',
-        'DBDriver' => 'MySQLi',
-        'DBPrefix' => '',
+        'hostname' => '127.0.0.1',
+        'username' => '',
+        'password' => '',
+        'database' => ':memory:',
+        'DBDriver' => 'SQLite3',
+        'DBPrefix' => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect' => false,
         'DBDebug'  => (ENVIRONMENT !== 'production'),
         'charset'  => 'utf8',
@@ -73,7 +73,7 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 8889,
+        'port'     => 3306,
     ];
 
     public function __construct()
@@ -84,7 +84,7 @@ class Database extends Config
         // we are currently running an automated test suite, so that
         // we don't overwrite live data on accident.
         if (ENVIRONMENT === 'testing') {
-            $this->defaultGroup = 'default';
+            $this->defaultGroup = 'tests';
         }
     }
 }

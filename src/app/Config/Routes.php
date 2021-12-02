@@ -31,11 +31,10 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/mail', 'SendMail::index');
-$routes->get('/file', 'FileUpload::index');
-$routes->add('/file/(:any)', 'FileUpload::download/$1');
+$routes->get('/mail', 'Mail::index');
+$routes->get('/file', 'File::index');
+$routes->add('/file/(:any)', 'File::download/$1');
 $routes->get('/chat', 'ChatController::index');
-
 
 /*
  * --------------------------------------------------------------------
