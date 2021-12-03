@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./css.css" rel="stylesheet">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xxl navbar-light bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="nav-item nav-link text-light">
+                <h3>Les Bleuets</h3>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="#">
+                        <img src="Frame 14.png" class="img-rounded" alt="Profil" />
+                    </a>
+                    <a href="#" class="nav-item nav-link active text-light">Messagerie</a>
+                    <a href="#" class="nav-item nav-link text-light">Mail</a>
+                    <a href="#" class="nav-item nav-link text-light">Evenements</a>
+                    <a href="#" class="nav-item nav-link text-light">Partage de documents</a>
+                    <a href="#" class="nav-item nav-link text-light">Groupe de travail</a>
+                    <a href="#" class="nav-item nav-link text-light">Gestion comptes</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#">
+                        <img src="Frame 13.png" class="img-rounded" alt="Deco" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-left p-5 bg-light ">
+        <h3 class="display-3">Partage de documents</h3>
+    </div>
+
+    <div class="row justify-content-around custom-line">
+        <div class="col-9 mt-5">
+            <img src="dossier reunion CA.png" style="position:absolute;z-index:2;" class="left_dossier"/>
+            <a data-toggle="modal" data-target="#exampleModal">
+                <img src="supp.png" style="position:absolute;z-index:20" class="left_dossier_supp"/><br>
+            </a>
+            
+            
+            <img src="pdf.png" style="position:absolute;z-index:4;" class="left"/>
+            <a data-toggle="modal" data-target="#exampleModal">
+                <img src="supp.png" style="position:absolute;z-index:20" class="left_pdf"/><br>
+            </a>
+        </div>
+        <div class="col-2">
+            <br>
+            <div class="row mb-2">
+                <button type="button" class="btn btn-primary btn-lg">Ajouter un dossier </button><br><br>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary btn-lg">Ajouter un document</button>
+            </div>
+        </div>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="3" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Supprimer un document</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Êtes vous sûr de vouloir supprimer ce fichier ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btn-primary">Confirmer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
